@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.Links{
+    color: white;
+    text-decoration: none;
+    padding: 0px 3px 0px 0px;
+}
+.Links:hover{
+    background-color: orange;
+    border-radius: 3px;
+}

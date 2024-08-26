@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Footer() {
     return (
         <>
-            <div style={{ width: '100%', height: '300px' }} className='d-flex justify-content-center align-items-center flex column mt-5 bg-primary'>
+            <div style={{ width: '100%', height: '300px' }} className='d-flex justify-content-center align-items-center mt-5 bg-primary flex-column'>
                 <div className='d-flex justify-content-evenly align-items-center mb-5 w-100 ' style={{ color: 'white' }}>
                     <div style={{ width: '400px' }} className='ms-5'>
                         <h4 style={{ color: 'orange' }}>
@@ -41,8 +41,10 @@ function Footer() {
                         </div>
 
                     </div>
+                    
                 </div>
-                {/* <p style={{color:'white'}}>Copyright&copy; 2024 e-kart built with react redux</p> */}
+                
+               <p style={{color:'white'}}>Copyright&copy; 2024 e-kart built with react redux</p>
             </div>
           
             

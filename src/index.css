@@ -7,7 +7,7 @@
 .Links{
     color: white;
     text-decoration: none;
-    padding: 0px 3px 0px 0px;
+    padding: 0px 3px 0px 2px;
 }
 .Links:hover{
     background-color: orange;

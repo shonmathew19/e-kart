@@ -8,10 +8,16 @@ const whishlistSlice = createSlice({
 
         addtoWhishList: (state, action) => {
             state.push(action.payload)
+        },
+
+        //to remove item from state
+
+        removeFromWishlist: (state, action) => {
+            return state.filter(item => item.id != action.payload)
         }
 
     }
 })
 
-export const { addtoWhishList } = whishlistSlice.actions
+export const { addtoWhishList,removeFromWishlist } = whishlistSlice.actions
 export default whishlistSlice.reducer;

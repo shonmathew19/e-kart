@@ -5,11 +5,16 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { removeFromWishlist } from '../redux/wishlistSlice';
+import { addToCart } from '../redux/cartSlice';
 function Wishlist() {
   const whishListItem = useSelector((state) => state.wishlistReducer);
   console.log('============whishlist items in whishlist page========');
   console.log(whishListItem);
   const dispatch = useDispatch()
+  const handleWishlist = (item) => {
+    dispatch(addToCart(item))
+    dispatch(removeFromWishlist(item.id))
+  }
 
 
   return (
@@ -33,7 +38,7 @@ function Wishlist() {
                       <Button className='w-50 me-2' variant="outline-danger" onClick={() => dispatch(removeFromWishlist(item.id))}>
                         <i class="fa-solid fa-trash"></i>
                       </Button>
-                      <Button className='w-50' variant="outline-success">
+                      <Button className='w-50' variant="outline-success" onClick={() => handleWishlist(item)}>
                         <i className="fa-solid fa-cart-shopping me-2 "></i>
                       </Button>
                     </div>
